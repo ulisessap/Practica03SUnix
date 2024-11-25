@@ -72,6 +72,36 @@ Despues de haber guardado los cambios, ponemos el comando sudo update-grub
 
 ![image](https://github.com/user-attachments/assets/6c62929e-8698-455f-a5ba-1c53e48a5bd5)
 
+![image](https://github.com/user-attachments/assets/5d795967-2541-4535-9467-24b1aac3ced2)
+
+# Proteccion contra contraseña de GRUB
+
+Ahora aplicaremos los sieguientes comandos 
+
+![image](https://github.com/user-attachments/assets/0033fd91-3723-4fff-bb69-0a37fbd6c883)
+
+El comando sudo grub-mkpasswd-pbkdf2 se utiliza para generar una contraseña cifrada para usar en la configuración de GRUB. Específicamente, este comando genera un hash PBKDF2 (Password-Based Key Derivation Function 2) de la contraseña que proporcionas. Esta hash se puede usar para proteger el menú de GRUB con una contraseña.
+
+El comando sudo nano /etc/grub.d/40_custom abre el archivo 40_custom en el directorio /etc/grub.d/ usando el editor de texto nano con permisos de superusuario.
+
+El archivo 40_custom es un archivo de configuración utilizado por GRUB para añadir entradas personalizadas al menú de arranque. Este archivo se usa para definir entradas de menú adicionales o personalizadas que no se generan automáticamente por otros scripts en /etc/grub.d/.
+
+![image](https://github.com/user-attachments/assets/39979169-a304-48b7-80ba-313b78568818)
+
+Colocamos el usuario y la contraseña encriptada
+
+![image](https://github.com/user-attachments/assets/aa42c504-716d-48a6-a14d-6c1fee9a1464)
+
+Ahora reiniciamos el sistema y vemos que el inicio es de forma normal
+
+![image](https://github.com/user-attachments/assets/864e58f7-9875-4200-ab01-b49603210ef8)
+
+Volvemos a reiniciar el sistema y ahora vemos que al intentar ingresar en el menú de edición de las entradas del GRUB, esta pedida el usuario root y la contraseña que creamos para generar la contraseña encriptada.
+
+![image](https://github.com/user-attachments/assets/78391fbe-ecff-4b62-a4ef-7aa9fee5842a)
+
+
+
 
 
 
