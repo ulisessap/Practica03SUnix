@@ -62,6 +62,18 @@ Nos dirigimos a estas lienas
 
 ![image](https://github.com/user-attachments/assets/c10ba963-fcda-4378-8957-54b5b88613f4)
 
+Y ponemos --unrestricted antes de la etiqueta CLASS
+
+![image](https://github.com/user-attachments/assets/868e1bb1-8786-4721-ad22-a39e4d2708e5)
+
+Colocar --unrestricted antes de ${CLASS} significa que esa entrada de menú específica se podrá seleccionar libremente en GRUB, incluso si otras entradas requieren autenticación.
+
+Despues de haber guardado los cambios, ponemos el comando sudo update-grub
+
+![image](https://github.com/user-attachments/assets/6c62929e-8698-455f-a5ba-1c53e48a5bd5)
+
+
+
 
 
 
