@@ -32,5 +32,41 @@ Le podemos decir al kernel que, en lugar de iniciar el sistema normalmente, carg
 
 Y luego presionamos CTRl x
 
+![image](https://github.com/user-attachments/assets/89cc5d95-8b29-48be-b832-4f59a25d20b4)
+
+- mount:
+El comando mount se utiliza para montar sistemas de archivos en Linux. Esto significa que se asocia un sistema de archivos con un punto de montaje en el árbol de directorios, lo que permite acceder a su contenido. Sin argumentos, mount muestra una lista de todos los sistemas de archivos montados en ese momento.
+
+![image](https://github.com/user-attachments/assets/d9b87108-bc50-405c-9db8-9b3050f67344)
+
+- mount -o remount,rw /:
+Este comando vuelve a montar el sistema de archivos raíz / con permisos de lectura y escritura. Por defecto, algunos sistemas pueden arrancar con el sistema de archivos raíz montado en modo de solo lectura para realizar chequeos o reparaciones antes de permitir modificaciones. Este comando cambia ese estado a lectura-escritura (rw), lo que permite modificar archivos en el sistema de archivos raíz.
+
+![image](https://github.com/user-attachments/assets/f6353da7-30b8-420f-9785-c47a32b23d3f)
+
+- passwd
+  
+![image](https://github.com/user-attachments/assets/69953642-603b-45fd-8aed-d6b527fb02d2)
+
+Ahora reiniciamos la maquina
+
+Y para mas comodo, nos conectamos por ssh a la maquina 
+
+Modificaremos opciones avanzadas, sudo nano /etc/grub.d/10_linux
+
+Este archivo es parte de la configuración de GRUB (GRand Unified Bootloader) en sistemas Linux. Específicamente, el archivo 10_linux se encarga de detectar y generar entradas en el menú de GRUB para los sistemas operativos Linux instalados en la máquina. Cuando ejecutas sudo update-grub, el contenido de este archivo se utiliza para construir el archivo de configuración principal de GRUB.
+
+![image](https://github.com/user-attachments/assets/aa876e43-1239-40a8-b490-9d00aba938ac)
+
+Nos dirigimos a estas lienas 
+
+![image](https://github.com/user-attachments/assets/c10ba963-fcda-4378-8957-54b5b88613f4)
+
+
+
+
+
+
+
 
 
